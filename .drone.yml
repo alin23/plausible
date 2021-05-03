@@ -1,0 +1,26 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: deploy
+    image: curlimages/curl
+    commands:
+      - curl -L -s -S https://alin:$${DEPLOY_PASSWORD}@deploy.darkwoods.win/plausible
+    environment:
+      DEPLOY_PASSWORD:
+        from_secret: deploy_password
+    when:
+      branch:
+        - master
+
+---
+kind: signature
+hmac: fbded33667575c2c546b8c00e993cf47023ae068b323b9f8e9ca44fe96fa52ef
+
+...
