@@ -61,7 +61,7 @@ services:
       - mail
       - geoip
     ports:
-      - 8101:8000
+      - 8077:8000
     environment:
       GEOLITE2_COUNTRY_DB: /geoip/GeoLite2-Country.mmdb
       DISABLE_REGISTRATION: "true"
