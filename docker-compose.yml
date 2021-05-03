@@ -13,7 +13,7 @@ x-refs:
 
 volumes:
   db:
-  event:
+  events:
   geoip:
 
 services:
