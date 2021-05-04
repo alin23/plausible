@@ -72,5 +72,7 @@ services:
       ADMIN_USER_PWD:
       BASE_URL:
       SECRET_KEY_BASE:
+      GOOGLE_CLIENT_ID:
+      GOOGLE_CLIENT_SECRET:
     volumes:
       - geoip:/geoip:ro
